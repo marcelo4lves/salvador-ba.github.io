@@ -1,0 +1,67 @@
+/** Cabecalho ***/
+header {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+header img {
+    width: 300px;
+    align-self: center;
+}
+header > h1{
+    margin: -10px;
+    margin-bottom: 20px;
+    color: red;
+    align-self: center;
+    
+}
+
+/** main ***/
+ main{
+    width: 1200px;
+    margin: 0 auto;
+ }
+
+ .titulo-categoria{
+    border-right: 5px solid rgb(0, 0, 0);
+    border-bottom: 5px solid #000;
+ }
+ .titulo-categoria::after{
+    content: " ";
+    width:50px;
+    height: 90px;
+    background-color: black;
+    border-bottom: 1px solid rgb(0, 0, 0);
+ }
+ /** praias ***/
+.praias{
+    display: flex;
+    justify-content: space-between;
+    align-content: space-between;
+    flex-wrap: wrap;
+    height: auto;
+
+
+}
+
+.praia{
+    flex: 1 1 390px;
+    height: 260px;
+    object-fit: center;
+    border: 2px solid #f00;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    
+
+}
+
+.praia img{
+    object-fit: cut;
+    max-height: 100%;
+    
+}
+
+#p2,#p3,#p4,#p5,#p6,#p7,#p8,#p9{
+    background:url(../img/praia.jpg);
+}
