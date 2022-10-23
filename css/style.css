@@ -1,3 +1,8 @@
+*{
+    margin: 0;
+    font-family:'roboto', sans-serif;
+    
+}
 /** Cabecalho ***/
 header {
     display:flex;
@@ -12,56 +17,181 @@ header img {
 header > h1{
     margin: -10px;
     margin-bottom: 20px;
-    color: red;
+    color: #002046;
     align-self: center;
+    font-family: 'Marvel', sans-serif;
+    font-size: 84px;
+    text-transform: uppercase;
     
 }
 
 /** main ***/
  main{
-    width: 1200px;
+    max-width: 1200px;
     margin: 0 auto;
+    padding: 0 20px;
  }
 
  .titulo-categoria{
-    border-right: 5px solid rgb(0, 0, 0);
-    border-bottom: 5px solid #000;
+    border-right: 5px solid #002046;
+    border-bottom: 5px solid #002046;
+    margin:15px 0;
  }
  .titulo-categoria::after{
     content: " ";
     width:50px;
     height: 90px;
-    background-color: black;
-    border-bottom: 1px solid rgb(0, 0, 0);
+    background-color: #002046;
+    border-bottom: 1px solid #002046;
  }
+
+ .conteudos{
+    display: flex;
+    flex-direction: column;
+    
+ }
+
+
+ /*** Buscador ***/
+ .buscador{    
+    display: inline-block;
+    position: relative;
+    margin-bottom: 50px;
+ }
+
+ .buscador form input{
+    width: 40%;
+    height:37px;
+    border-radius: 10px;
+    position: absolute;
+    right: 0;
+    
+    
+    
+ }
+
+ #search-icon{
+    position: absolute;
+    font-size: 25px;
+    right:10px;
+    top:8px;
+    font-weight: 800;
+ }
+
  /** praias ***/
 .praias{
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     align-content: space-between;
     flex-wrap: wrap;
     height: auto;
-
-
 }
 
-.praia{
-    flex: 1 1 390px;
-    height: 260px;
-    object-fit: center;
-    border: 2px solid #f00;
-    margin-bottom: 10px;
-    box-sizing: border-box;
-    
+/*** Praias conteudos  ***/
 
+.praia{
+    width: 32.5%;
+    height:250px ;
+    margin-bottom:1.5%;    
+    object-fit: cover; 
+    position: relative;
+    
 }
 
 .praia img{
-    object-fit: cut;
-    max-height: 100%;
+    width: 100%;
+    height:250px ;
+    object-fit: cover; 
+}
+
+.subititle{
+    top:0;
+    padding-top: 25%;
+    position: absolute;
+    background:rgba(16, 1, 58, 0.5);
+    display: none;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.subititle {
+    text-transform: uppercase;
+    color:aliceblue;
+    font-size: 2em;
+    text-align: center;
     
 }
 
-#p2,#p3,#p4,#p5,#p6,#p7,#p8,#p9{
-    background:url(../img/praia.jpg);
+
+.praia:hover .subititle{
+    cursor:pointer;
+    display: block;
+    
+}
+
+/*** Roda pé ***/
+footer{
+    color:#fff;
+    background-color: #002046;
+    padding-top: 20px;
+}
+.info{
+    margin: 0 auto;
+    margin:20px;
+    max-width: 1200px;
+    
+    
+}
+
+.credits{
+    background-color: #000;
+    margin:0 auto;
+}
+.credits p{
+    text-align:center;  
+    padding:5px;
+}
+
+
+/** Responsivo **/
+
+@media screen and (max-width:790px){
+    .praia{
+        width: 49%;
+        margin-bottom:10px;
+    }
+
+    .subititle{
+        
+        padding-top: 30%;
+       }
+
+    .buscador{
+        width: 99%;
+       
+    }
+}
+
+
+
+
+@media screen and (max-width:600px){
+    .praias{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-content: space-between;
+    }
+
+    .subititle{
+    top:0;
+        padding-top: 20%;
+    }
+
+    .praia{
+        width: 100%;
+        
+    }
 }
